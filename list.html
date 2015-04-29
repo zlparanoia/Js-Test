@@ -1,0 +1,61 @@
+<style>
+	body {
+		margin: 0;
+		padding: 0;
+	}
+
+	#list ul {
+		list-style-type: none;
+		background-color: #ACAEA2;
+		width: 500px;
+		margin: 2px;
+	}
+	#list ul li {
+		display: none;    //默认状态为隐藏列表
+	}
+</style>
+
+<div id="list">
+<ul>列表1
+	<li>子列表</li>
+	<li>子列表</li>
+	<li>子列表</li>
+</ul>
+<ul>列表2
+	<li>子列表</li>
+	<li>子列表</li>
+	<li>子列表</li>
+</ul>
+<ul>列表3
+	<li>子列表</li>
+	<li>子列表</li>
+	<li>子列表</li>
+</ul>
+<ul>列表4
+	<li>子列表</li>
+	<li>子列表</li>
+	<li>子列表</li>
+</ul>
+</div>
+<script>
+    //获取每个ul
+	var uls = document.getElementById("list").getElementsByTagName("ul");
+	//遍历每个ul
+	for (var i = 0, len = uls.length; i < len; i++) {
+		//为每个ul设置点击事件处理程序
+		EventUtil.addHandler(uls[i], "click", function() {
+			//获取每个ul的每个子节点
+			for (var j = 0; j < this.childNodes.length; j++) {
+				//判断子元素是否为元素节点
+				if (this.childNodes[j].nodeType == 1) {
+					//判断元素是否显示，若显示则隐藏，隐藏则显示
+					if (this.childNodes[j].style.display == "block") {
+						this.childNodes[j].style.display = "none";
+					} else {
+						this.childNodes[j].style.display = "block";
+					}
+				}
+			}
+
+		});
+	}
