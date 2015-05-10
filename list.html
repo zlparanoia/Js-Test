@@ -40,7 +40,19 @@
 </ul>
 </div>
 <script>
-    //获取每个ul
+       //浏览器兼容
+	var EventUtil = {
+		addHandler: function(element, type, handler) {
+			if (element.addEventListener) {
+				element.addEventListener(type, handler, false);
+			} else if (element.addHandler) {
+				element.addHandler("on" + type, handler);
+			} else {
+				element["on" + type] = handler;
+			}
+		}
+	};
+	//获取每个ul
 	var uls = document.getElementById("list").getElementsByTagName("ul");
 	//遍历每个ul
 	for (var i = 0, len = uls.length; i < len; i++) {
@@ -61,3 +73,4 @@
 
 		});
 	}
+</script>
