@@ -63,10 +63,10 @@
 				//判断子元素是否为元素节点
 				if (this.childNodes[j].nodeType == 1) {
 					//判断元素是否显示，若显示则隐藏，隐藏则显示
-					if (this.childNodes[j].style.display == "block") {
-						this.childNodes[j].style.display = "none";
-					} else {
+					if (this.childNodes[j].style.display == "") {
 						this.childNodes[j].style.display = "block";
+					} else {
+						this.childNodes[j].style.display = "";
 					}
 				}
 			}
