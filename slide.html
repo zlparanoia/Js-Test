@@ -1,0 +1,52 @@
+	<style>
+     * {
+     	margin: 0; 
+     	padding: 0;
+     }
+
+     #lip {
+          position: relative;
+          overflow: hidden;
+          width: 100px;
+          height: 18px;
+          margin: 100px auto;
+     }
+
+     ul {list-style: none;}
+
+     #list {
+          position: absolute;
+     }
+
+     #list li{
+          width: 100px;
+          height: 18px;
+         
+     }
+     
+     </style>
+
+     <div id="lip">
+          <ul id="list">
+               <li>第一行</li>
+               <li>第二行</li>
+               <li>第三行</li>
+               <li>第四行</li>
+          </ul>
+     </div>
+    
+
+     <script>
+     $(function() {
+          var list = $("#list");
+          setInterval(function() {
+               var fir = list.find("li:first"),
+                    line = fir.height();
+               fir.animate({
+                    marginTop: -line + "px"
+               }, 500, function() {
+                    fir.css("marginTop", 0).appendTo(list);
+               });
+          }, 1000);
+     });
+     </script>
