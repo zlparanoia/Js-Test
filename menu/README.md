@@ -2,7 +2,7 @@
 
 实现一个分类列表：
 效果图：
-![github](http://github.com/unicorn.png "github")
+![github](https://github.com/zlparanoia/Js-Test/blob/master/menu/img/display.png)
  
 
 功能：
