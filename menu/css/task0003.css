@@ -1,0 +1,102 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	height: 50px;
+	background-color: #DFDFDF;
+	border: 1px solid #ccc;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+ul { list-style: none;}
+
+.head-title {
+	color: #9E9E9E;
+	font-size: 20px;
+	line-height: 50px;
+	margin-left: 30px;
+}
+
+menu, .mission {
+	float: left;
+	width: 300px;
+	height: 585px;
+	border-right: 1px solid #ccc;
+}
+
+.menu-title li{
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+}
+
+.menu-list {
+	list-style: inside url(../img/file.jpg);
+	height: 470px;
+	border-bottom: 1px solid #ccc;
+}
+
+.menu-list ul {
+	list-style: inside url(../img/txt.jpg);
+	margin-left: 20px;
+}
+
+.add-list {
+	margin-left: 20px;
+	margin-top: 10px;
+	height: 30px;
+}
+
+.add-list img {
+	vertical-align: middle;
+}
+
+.menu-list a {
+	display: block;
+	width: 180px;
+	height: 30px;
+}
+
+.menu-list a img {
+	margin-left: 20px;
+	display: none;
+}
+
+.mis-top {
+	padding-top: 10px;
+	height: 40px;
+	border-bottom: 1px solid #ccc;
+	background-color: #F2F2EE;
+}
+
+.mis-top ul li a{
+	float: left;
+	margin-left: 20px;
+	font-size: 12px;
+	display: block;
+	width: 40px;
+	height: 20px;
+	text-align: center;
+	line-height: 20px;
+}
+
+.active {
+	border: 1px solid #ccc;
+	background-color: #fff;
+}
+
+.mis-list {
+	height: 479px;
+	border-bottom: 1px solid #ccc;
+}
+
+
+
+
